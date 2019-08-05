@@ -24,6 +24,24 @@ This article aims at providing a detailed insight to these keywords.
 13. else : It is a control statement for decision making & false expression pushes control to go in “else” block.
 14. elif : It is a control statement for decision making. It is short for “else if”.
 15. del : del is used to delete a reference to an object. Any variable or list value can be deleted using del.
+16. try : This keyword is used for exception handling, used to catch the errors in the code using the keyword except.
+          Code in “try” block is checked, if there is any type of error, except block is executed.
+17. except : As explained above, this works together with “try” to catch exceptions.
+18. raise : Also used for exception handling to explicitly raise exceptions.
+19. finally : No matter what is result of the “try” block, block termed “finally” is always executed.
+20. for : This keyword is used to control flow and for looping.
+21. while : Has a similar working like “for” , used to control flow and for looping.
+22. pass : It is the null statement in python. Nothing happens when this is encountered.
+23. import : This statement is used to include a particular module into current program.
+24. from : Generally used with import, from is used to import particular functionality from the module imported.
+25. as : This keyword is used to create the alias for the module imported. i.e giving a new name to the imported module.
+26. lambda : This keyword is used to make inline returning functions with no statements allowed internally.
+27. return : This keyword is used to return from the function.
+28. yield : This keyword is used like return statement but is used to return a generator.
+29. with : This keyword is used to wrap the execution of block of code within methods defined by context manager.
+30. in : This keyword is used to check if a container contains a value.
+         This keyword is also used to loop through the container.
+31. is : This keyword is used to test object identity, i.e to check if both objects take same memory location or not.
 
 """
 
@@ -68,4 +86,17 @@ print("Printing list values after deleting an element =", sample_list)
 
 # demonstrating use of assert
 # prints AssertionError
-assert 5 < 3, "5 is not small than 3"
+# assert 5 < 3, "5 is not small than 3"
+
+# Python code to demonstrate working of
+# in and is
+# using 'in' to check
+if 's' in 'geeksforgeeks':
+    print("Letter 's' is part of the word 'geeksforgeeks'")
+else:
+    print("Letter 's' is not part of the word 'geeksforgeeks'")
+
+# using 'in' to loop through
+for i in 'geeksforgeeks':
+    print(i, end=" ")
+print("\r")
