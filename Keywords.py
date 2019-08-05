@@ -53,3 +53,19 @@ print(False and True)
 # not (returns False)
 print(not True)
 
+# Python code to demonstrate
+# del and assert
+# initialising list
+sample_list = [1, 2, 3, 4, 5]
+
+# print all values for list
+print(sample_list)
+print("Index value of 4 within list is =", sample_list.index(4))
+
+# using del keyword to delete 3rd element
+del sample_list[3]
+print("Printing list values after deleting an element =", sample_list)
+
+# demonstrating use of assert
+# prints AssertionError
+assert 5 < 3, "5 is not small than 3"
