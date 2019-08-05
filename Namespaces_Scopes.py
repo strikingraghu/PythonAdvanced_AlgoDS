@@ -18,6 +18,14 @@ Modules can have various functions and classes.
 A local namespace is created when a function is called, which has all the names defined in it.
 Similar, is the case with class.
 
+Although there are various unique namespaces defined, we may not be able to access them from every part of the program.
+The concept of scope comes into play.
+Scope is the portion of the program from where a namespace can be accessed directly without any prefix.
+At any given moment, there are at least three nested scopes.
+i)      Scope of the current function which has local names
+ii)     Scope of the module which has global names
+iii)    Outermost scope which has built-in names
+
 """
 a = 5
 b = 10
@@ -38,17 +46,21 @@ print("New value of a =", a)
 b = 2
 print("ID of variable b =", id(b))
 print("New value of b =", b)
-print('-----------------------')
-print()
 
 # changing a value to a function
-
-
 def print_hello():
     print("Hello")
 a = print_hello()
+print('-----------------------')
+print()
 
-
-
-
-
+def outer_function():
+    a = 20
+    def inner_function():
+        a = 30
+        print("1st output - value of a is = ", a)
+    inner_function()
+    print("2nd output - value of a is = ", a)
+a = 10
+outer_function()
+print("3rd output - value of a is = ", a)
