@@ -56,11 +56,29 @@ print()
 
 def outer_function():
     a = 20
+    
     def inner_function():
         a = 30
-        print("1st output - value of a is = ", a)
+        print("1st output - value of a is =", a)
     inner_function()
-    print("2nd output - value of a is = ", a)
+    print("2nd output - value of a is =", a)
 a = 10
 outer_function()
-print("3rd output - value of a is = ", a)
+print("3rd output - value of a is =", a)
+print('-----------------------')
+print()
+
+
+def outer_func():
+    global x
+    x = 20
+
+    def inner_func():
+        global x
+        x = 30
+        print("1st Output x =", x)
+    inner_func()
+    print("2nd Output x =", x)
+x = 10
+outer_func()
+print("3rd Output x =", x)
