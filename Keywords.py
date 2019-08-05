@@ -42,6 +42,9 @@ This article aims at providing a detailed insight to these keywords.
 30. in : This keyword is used to check if a container contains a value.
          This keyword is also used to loop through the container.
 31. is : This keyword is used to test object identity, i.e to check if both objects take same memory location or not.
+32. global : This keyword is used to define a variable inside the function to be of a global scope.
+33. non-local : This keyword works similar to the global, but rather than global, this keyword declares a
+                variable to point to variable of outside enclosing function, in case of nested functions.
 
 """
 
@@ -100,3 +103,55 @@ else:
 for i in 'geeksforgeeks':
     print(i, end=" ")
 print("\r")
+
+# Python code to demonstrate working of
+# global and non local
+
+# initializing variable globally
+sample_var = 10
+print("Value of a sample variable =", sample_var)
+
+# used to read the variable
+def read():
+    print("Generic read function of sample variable =", sample_var)
+
+# changing the value of globally defined variable
+def modification1():
+    global sample_var
+    sample_var = 20
+
+# changing the value of local variable
+def modification2():
+    sample_var = 30
+
+# reading all values
+read()
+modification1()
+read()
+modification2()
+read()
+
+# demonstrating non-local
+# inner loop changing the value of outer a
+# prints 10
+print("Value of using a non-local is : ", end="")
+def outer():
+    a = 5
+    def inner():
+        nonlocal a
+        a = 10
+    inner()
+    print(a)
+outer()
+
+# demonstrating without non local
+# inner loop not changing the value of outer a
+# prints 5
+print("Value of a variable without nonlocal is : ", end="")
+def outer():
+    a = 5
+    def inner():
+        a = 10
+    inner()
+    print(a)
+outer()
