@@ -1,4 +1,5 @@
 """"
+
 Python Keywords – Introduction
 
 This article aims at providing a detailed insight to these keywords.
@@ -86,6 +87,8 @@ print("Index value of 4 within list is =", sample_list.index(4))
 # using del keyword to delete 3rd element
 del sample_list[3]
 print("Printing list values after deleting an element =", sample_list)
+print('-----------------------')
+print()
 
 # demonstrating use of assert
 # prints AssertionError
@@ -103,6 +106,8 @@ else:
 for i in 'geeksforgeeks':
     print(i, end=" ")
 print("\r")
+print('-----------------------')
+print()
 
 # Python code to demonstrate working of
 # global and non local
