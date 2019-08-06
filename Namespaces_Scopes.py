@@ -56,7 +56,7 @@ print()
 
 def outer_function():
     a = 20
-    
+
     def inner_function():
         a = 30
         print("1st output - value of a is =", a)
