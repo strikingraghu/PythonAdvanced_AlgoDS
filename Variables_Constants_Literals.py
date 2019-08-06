@@ -90,6 +90,34 @@ multiple_line_str = """This is a multi-line comment"""
 raw_string = r"raw \n string"
 print(strings, '|', char, '|', multiple_line_str, '|', raw_string)
 
+# boolean literals
+x = (1 == True)
+y = (1 == False)
+sample_a = True + 4
+sample_b = False + 10
+print("Value of sample_a =", sample_a)
+print("Value of sample_b =", sample_b)
 
+# special literals
+drink = "Available"
+food = None
 
+def menu(x):
+    if x == drink:
+        print(drink)
+    else:
+        print(food)
 
+menu(drink)
+menu(food)
+
+# literal collections
+fruits = ["apple", "mango", "orange"]
+numbers = (1, 2, 3)
+alphabets = {'a': 'apple', 'b': 'ball', 'c': 'cat'}
+vowels = {'a', 'e', 'i', 'o', 'u'}
+
+print(fruits, '|', type(fruits))
+print(numbers, '|', type(numbers))
+print(alphabets, '|', type(alphabets))
+print(vowels, '|', type(vowels))
