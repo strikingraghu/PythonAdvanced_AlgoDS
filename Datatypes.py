@@ -30,10 +30,12 @@ print(sample_var3, '|', type(sample_var3))
 print('-----------------------')
 print()
 
-# lists & list slicing (Mutable/Non-Ordered/Duplicates Allowed)
+# lists & list slicing (Mutable/Ordered/Duplicates Allowed)
 
 sample_list1 = ['a', 2, 1, 2, 1, 'hello', 44.0]
-print(sample_list1)
+sample_list2 = [1, 99, 100, 2, 2, 39, 4, 4, 83]
+print("List Output =", sample_list1)
+print("List Output =", sample_list2)
 print(sample_list1[3], '|', id(sample_list1[3]))
 print("Slicing output =", sample_list1[1:4])
 print("Slicing output =", sample_list1[1:])
@@ -46,16 +48,47 @@ print(sample_list1)
 print('-----------------------')
 print()
 
-# tuple (Immutable/Non-Ordered/Duplicates Allowed)
-sample_tuple1 = (1, 1, 2, 2, 8, 8, 3, 3)
-print(sample_tuple1)
+# tuple (Immutable/Ordered/Duplicates Allowed)
+sample_tuple1 = (1, 1, 2, 236, 8, 8, 3, 3)
+print("Tuple Output =", sample_tuple1)
 for id_value in sample_tuple1:
     print("ID =", id(id_value))
 
 print(sample_tuple1[1])
 # sample_tuple1[1] = 10 # We can't change value
 print(sample_tuple1)
+print('-----------------------')
+print()
 
+# strings (Immutable)
+sample_string1 = 'Hello World'
+sample_string2 = 'Hello Bangalore'
+print("Printing String1 =", sample_string1)
+print("Printing String2 =", sample_string2)
+print(sample_string1[0], '|', id(sample_string1[0]))
+print(sample_string1[1], '|', id(sample_string1[1]))
+for id_value_str in sample_string1[:]:
+    print("ID =", id(id_value_str), '|', "Value =", id_value_str)
+print('-----------------------')
+print()
 
+# set (Unordered & Unique)
+sample_set1 = {1, 4, 'hello', 8, 1, 2, 2}
+print('Set Output =', sample_set1)
+sample_set2 = {4, 4, 1, 1, 1, 3928, 3, 9, 00, 0, 282}
+sample_set3 = {'a', 'x', 'y', 'b', 'c'}
+print(sample_set2)
+print(sample_set3)
+for id_set_val in sample_set2:
+    print("ID =", id(id_set_val), '|', "Value =", id_set_val)
+print(len(sample_set2))
+print('-----------------------')
+print()
+
+# dictionary (Unordered & Allows Duplicates)
+sample_dict1 = {1: 2, 2: 3, 3: 4, 4: 5, 5: 2, 6: 3, 7: 4, 8: 5}
+print("Dictionary Output =", sample_dict1)
+print("Dictionary Keys Only =", sample_dict1.keys())    # key is always unique
+print("Dictionary Values Only =", sample_dict1.values())
 
 
