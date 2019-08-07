@@ -12,12 +12,12 @@ double_check_with_user = (input("Do you want to enter another number? "))
 
 total_sum = 0
 give_another_num = 0
+total_sum += give_num
 while double_check_with_user != 'no':
-    total_sum += give_num
-    give_another_num = int(input('Type the number you like in this console! '))
+    give_another_num = int(input('Ok, type another number you like in this console! '))
     if type(give_another_num) == int:
         total_sum += give_another_num
-        check_again = (input("Do you want to enter another number? "))
+        check_again = (input("Do you still want to enter another number? "))
         if check_again == 'no':
             print(total_sum)
             break
