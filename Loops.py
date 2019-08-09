@@ -58,3 +58,22 @@ while x <= 100:
         print(x, "is a prime number")
     x += 1
 print("Done")
+print("--------------------------")
+
+
+# break and continue
+for val in 'String':
+    if val == 'z':
+        break
+    print(val)
+else:
+    print("Iteration Done")
+print("--------------------------")
+
+
+for another_val in 'String':
+    if another_val == 'i':
+        continue
+    print(another_val)
+else:
+    print("Iteration Done")
