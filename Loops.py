@@ -22,6 +22,7 @@ sample_num = [3, 6, 9, 12, 15, 18]
 for calc_all in sample_num:
     total_sum += total_sum + calc_all
 print("Value of the numbers in the list is =", total_sum)
+print("--------------------------")
 
 # for loop
 
@@ -33,3 +34,27 @@ for number_range in range(10, 21):
             break
     else:
         print(number_range, 'is a prime number')
+print("--------------------------")
+
+
+# while loop
+
+simple_count = 0
+while simple_count < 10:
+    simple_count += 1
+    print("Loop Executed =", simple_count)
+print("--------------------------")
+
+
+# nested loop
+x = 2
+while x <= 100:
+    y = 2
+    while y <= x/y:
+        if not x % y:
+            break
+        y += 1
+    if y > x/y:
+        print(x, "is a prime number")
+    x += 1
+print("Done")
