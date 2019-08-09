@@ -12,6 +12,8 @@
             Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
         NESTED LOOP
             You can use one or more loop inside any another while loop, for loop or do..while loop.
+        BREAK, CONTINUE & PASS
+            You can use one or more of these Control options within Python.
 
 """
 
@@ -77,3 +79,11 @@ for another_val in 'String':
     print(another_val)
 else:
     print("Iteration Done")
+print("--------------------------")
+
+
+# pass
+sequence = {'p', 'a', 's', 's'}
+for another_value in sequence:
+    pass
+print("Done")
