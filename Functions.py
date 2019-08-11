@@ -9,12 +9,18 @@
 
 
 def odd_or_even(give_an_input):
+    """
+    Sample function that takes an input
+    from an end user
+
+    """
     if give_an_input % 2 == 0:
         print("Even Number")
     else:
         print("Odd Number")
 
 odd_or_even(6778)
+print(odd_or_even.__doc__)
 print("--------------------------")
 
 
@@ -37,3 +43,40 @@ def wishing_person(name, message='Good Luck!'):
 
 wishing_person("Sam")
 print("--------------------------")
+
+
+def fun():
+    string_val = "GeeksforGeeks"
+    some_num = 20
+    return string_val, some_num
+
+string_val, some_num = fun()
+print(string_val)
+print(some_num)
+print("Close of fun() function!")
+
+
+def absolute_value(num):
+    """
+    This function provides an absolute value
+    of the entered number
+    """
+    if num > 0:
+        return num
+    else:
+        return -num
+
+print(absolute_value(2))
+print(absolute_value(-5))
+print(absolute_value.__doc__)
+print("--------------------------")
+
+
+def calc_factorial(num):
+    if num == 1:
+        return 1
+    else:
+        return num * calc_factorial(num-1)
+
+num = 8
+print("The factorial of", num, "is", calc_factorial(num))
