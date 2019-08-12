@@ -93,3 +93,42 @@ print("Output of Lambda function -", new_list)
 another_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 get_new_list = list(map(lambda x: x * 2, another_list))
 print("Output of Lambda function -", get_new_list)
+print("--------------------------")
+
+
+# global functions
+var_c = 1
+def add_func():
+    # var_c = var_c + 2     # UnboundLocalError will be noticed for this function. Commented -
+    print(var_c)
+add_func()
+
+
+def add_another_func():
+    global var_c
+    var_c = var_c + 2
+    print("Inside add_another_func(): ", var_c)
+
+add_another_func()
+print("In main function: ", var_c)
+
+# global nested function
+
+
+def sample_foo():
+    var_x = 20
+
+    def sample_bar():
+        global var_x
+        var_x = 25
+    print("Before calling sample_bar() : ", var_x)
+    print("Calling sample_bar() now -")
+    sample_bar()
+    print("After calling sample_bar() : ", var_x)
+
+sample_foo()
+print("X's value in main function: ", var_x)
+# If we make any changes inside the bar() function, the changes appears outside the local scope, i.e. foo().
+# Before and after calling bar(), the variable x takes the value of local variable i.e x = 20.
+# Outside of the foo() function, the variable x will take value defined in the bar() function i.e x = 25.
+print("--------------------------")
