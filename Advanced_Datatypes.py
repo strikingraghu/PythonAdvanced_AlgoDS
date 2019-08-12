@@ -56,3 +56,33 @@ print('-----------------------')
 
 # tuples
 
+sample_tuple = 3, 4, 'hello', 'world', 9, 11
+print("Print Tuple - Uses Tuple Unpacking Mechanism :", sample_tuple)
+print("Type :", type(sample_tuple))
+
+# Creating a tuple having one element
+my_tuple = ("hello",)
+print(type(my_tuple))  # <class 'tuple'>
+
+new_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+print("Index Value :", new_tuple[1][1])     # Output is equal to 4
+print("Negative Indexing :", new_tuple[2][-2])      # Output is equal to 2
+print("Slicing Tuple :", new_tuple[1:])
+new_tuple[1][1] = 'mousepad'
+print("After Changing Values :", new_tuple)
+print("Existence Test :", 'mouse' in new_tuple)     # Output says True
+print('-----------------------')
+
+
+# strings
+
+sample_str = 'programiz'
+another_str = 'blogs'
+print("Printing Str :", sample_str)
+print("Length of Str :", len(sample_str))
+print("Length of Str :", sample_str.__len__())
+print("Capitalize Str :", sample_str.capitalize())
+print("Checking Uppercase Str :", sample_str.isupper())
+print("Changing Cases :", sample_str.upper())
+print("String Concatenation :", sample_str + another_str)
+
