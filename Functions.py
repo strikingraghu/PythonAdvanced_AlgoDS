@@ -80,3 +80,16 @@ def calc_factorial(num):
 
 num = 8
 print("The factorial of", num, "is", calc_factorial(num))
+
+
+# lambda
+double = lambda x: x * 2
+print("Output of Lambda function -", double(5))
+
+my_list_sample = [1, 5, 4, 6, 8, 11, 3, 12]
+new_list = list(filter(lambda x: (x % 2 == 0), my_list_sample))
+print("Output of Lambda function -", new_list)
+
+another_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+get_new_list = list(map(lambda x: x * 2, another_list))
+print("Output of Lambda function -", get_new_list)

@@ -33,7 +33,7 @@ print()
 # lists & list slicing (Mutable/Ordered/Duplicates Allowed)
 
 sample_list1 = ['a', 2, 1, 2, 1, 'hello', 44.0]
-sample_list2 = [1, 99, 100, 2, 2, 39, 4, 4, 83]
+sample_list2 = [1, 99, 100, 2, 2, 39, 4, 4, 83]     # Order of input of elements is maintained
 print("List Output =", sample_list1)
 print("List Output =", sample_list2)
 print(sample_list1[3], '|', id(sample_list1[3]))
@@ -49,7 +49,7 @@ print('-----------------------')
 print()
 
 # tuple (Immutable/Ordered/Duplicates Allowed)
-sample_tuple1 = (1, 1, 2, 236, 8, 8, 3, 3)
+sample_tuple1 = (1, 1, 2, 236, 8, 8, 3, 3)      # Order of input of elements is maintained
 print("Tuple Output =", sample_tuple1)
 for id_value in sample_tuple1:
     print("ID =", id(id_value))
@@ -73,7 +73,7 @@ print('-----------------------')
 print()
 
 # set (Unordered & Unique)
-sample_set1 = {1, 4, 'hello', 8, 1, 2, 2}
+sample_set1 = {1, 4, 'hello', 8, 1, 2, 2}       # Unordered & Duplicates Not Allowed
 print('Set Output =', sample_set1)
 sample_set2 = {4, 4, 1, 1, 1, 3928, 3, 9, 00, 0, 282}
 sample_set3 = {'a', 'x', 'y', 'b', 'c'}
