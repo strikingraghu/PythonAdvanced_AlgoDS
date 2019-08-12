@@ -7,6 +7,7 @@ Refer to Datatypes script for Dictionary definitions -
 # numbers
 import decimal
 import math
+import random
 
 var_int = 5
 print("Type Conversion - Int - Float :", float(var_int))
@@ -30,3 +31,6 @@ print(math.sinh(1))
 
 # Output: 720
 print(math.factorial(6))
+
+var_x = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+print("Random Output :", random.choice(var_x))
