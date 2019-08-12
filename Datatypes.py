@@ -13,6 +13,25 @@ List is an ordered sequence of items. It is one of the most used datatype in Pyt
 All the items in a list do not need to be of the same type.
 Declaring a list is pretty straight forward. Items separated by commas are enclosed within brackets [ ].
 
+Python Tuple -
+A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists.
+Differences between tuples and lists are, the tuples cannot be changed unlike lists!
+Also, tuples use parentheses, whereas lists use square brackets.
+
+Python Strings -
+Strings are amongst the most popular types in Python. We can create them simply by enclosing characters in quotes.
+Python treats single quotes the same as double quotes.
+
+Python Sets -
+A set is an unordered collection of items.
+Every element is unique (no duplicates) and must be immutable (which cannot be changed).
+However, the set itself is mutable. We can add or remove items from it.
+
+Python Dictionary -
+Python dictionary is an unordered collection of items.
+While other compound data types have only value as an element, a dictionary has a key: value pair.
+Dictionaries are optimized to retrieve values when the key is known.
+
 """
 # numbers (Immutable)
 
