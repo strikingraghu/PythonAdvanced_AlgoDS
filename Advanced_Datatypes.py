@@ -85,4 +85,28 @@ print("Capitalize Str :", sample_str.capitalize())
 print("Checking Uppercase Str :", sample_str.isupper())
 print("Changing Cases :", sample_str.upper())
 print("String Concatenation :", sample_str + another_str)
+print('-----------------------')
 
+# sets
+sample_set1 = {2, 3, 4, 4, 5, 5, 'hello', 'world', (4, 5, 6)}
+print("Complex Set :", sample_set1)
+print("Length :", sample_set1.__len__())
+
+# initialize a with {}
+a = {}
+
+# check data type of a
+# Output: <class 'dict'>
+print(type(a))
+
+# initialize a with set()
+a = set()
+
+# check data type of a
+# Output: <class 'set'>
+print(type(a))
+
+sample_set2 = {2, 200, 4, 1837, 5, 5, 'hello', 'bangalore', (4, 5, 6)}
+print("Set Output - Before Modifications :", sample_set2)
+sample_set2.add(100)
+print("Set Output - After Modifications :", sample_set2)
