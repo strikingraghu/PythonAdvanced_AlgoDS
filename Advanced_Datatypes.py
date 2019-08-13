@@ -110,3 +110,12 @@ sample_set2 = {2, 200, 4, 1837, 5, 5, 'hello', 'bangalore', (4, 5, 6)}
 print("Set Output - Before Modifications :", sample_set2)
 sample_set2.add(100)
 print("Set Output - After Modifications :", sample_set2)
+sample_set2.remove(1837)       # Element 1837 is removed
+print("Set Element After Removals :", sample_set2)
+
+set1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+set2 = {2, 4, 6, 8, 10}
+print("Union Output :", set1 | set2)
+print("Intersection Output :", set1 & set2)
+print("Difference Output :", set1 - set2)
+print("Symmetric Difference Output :", set1 ^ set2)
