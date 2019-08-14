@@ -8,6 +8,7 @@ Refer to Datatypes script for Dictionary definitions -
 import decimal
 import math
 import random
+import array
 
 var_int = 5
 print("Type Conversion - Int - Float :", float(var_int))
@@ -140,3 +141,11 @@ print("Printing Comprehension Output :", squares_comprehension)
 unsorted_dict = {1: 'mysore', 8: 'hassan', 2: 'bangalore'}
 print("Sorted Dict Elements :", sorted(unsorted_dict))
 print('-----------------------')
+
+
+# arrays
+python_array = array.array('i', [2, 3, 6, 1, 19, 5, 20, 88, 34])    # Ordered Array
+print("Python Array :", python_array)
+print("Python Array Type :", type(python_array))
+python_array.reverse()
+print("After Reversing Order :", python_array)
