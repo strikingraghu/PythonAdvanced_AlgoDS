@@ -14,5 +14,7 @@ Close the file
 """
 
 file_open = open('C:/Users/rathnr/Desktop/Questions.txt')
-print(file_open)
+print("File Details :", file_open)
+print("File Contents :", file_open.read())
+print("File Size :", file_open.__sizeof__())
 
