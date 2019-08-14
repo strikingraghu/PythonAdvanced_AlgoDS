@@ -119,3 +119,24 @@ print("Union Output :", set1 | set2)
 print("Intersection Output :", set1 & set2)
 print("Difference Output :", set1 - set2)
 print("Symmetric Difference Output :", set1 ^ set2)
+print('-----------------------')
+
+# dictionary
+
+my_dict1 = {1: 'apple', 2: 'ball', 3: 'cat', 4: 'dumb'}
+my_dict2 = [(1, 'apple'), (2, 'bell'), (3, 'elephant'), (4, 'mysore')]
+change_to_dict = dict(my_dict2)
+print("Printing Dict :", my_dict1, my_dict2, "|", type(my_dict1), type(my_dict2))
+print("Printing Dict :", change_to_dict)
+print("Accessing Element :", my_dict1.get(4))
+print("Accessing Element :", my_dict1[4])
+my_dict1[4] = 'dog'
+print("After Changing Element :", my_dict1)
+del my_dict1[4]
+print("After Deleting Element :", my_dict1)
+
+squares_comprehension = {x: x*x for x in range(6)}
+print("Printing Comprehension Output :", squares_comprehension)
+unsorted_dict = {1: 'mysore', 8: 'hassan', 2: 'bangalore'}
+print("Sorted Dict Elements :", sorted(unsorted_dict))
+print('-----------------------')
