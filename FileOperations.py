@@ -13,8 +13,22 @@ Close the file
 
 """
 
-file_open = open('C:/Users/rathnr/Desktop/Questions.txt')
-print("File Details :", file_open)
-print("File Contents :", file_open.read())
-print("File Size :", file_open.__sizeof__())
+file_operations = open('C:/Users/rathnr/Desktop/Questions.txt')
+print("File Details :", file_operations)
+print("File Contents :", file_operations.read())
+print("File Size :", file_operations.__sizeof__())
+print("Closing File :", file_operations.close())
 
+# write
+file_activities = open('C:/Users/rathnr/PycharmProjects/PythonBasicAdvanced/file_activities.txt',
+                       encoding='utf-8', mode='w')
+file_activities.write('Python is the best programming language!\n')
+file_activities.write('Java is the best programming language!\n')
+file_activities.write('JS is the best programming language!\n')
+file_activities.write('.Net is the best programming language!\n')
+file_activities.write('PHP is the best programming language!\n')
+file_activities.write('Node is the best programming language!\n')
+file_activities.close()
+file_activities = open('C:/Users/rathnr/PycharmProjects/PythonBasicAdvanced/file_activities.txt')
+print("Another Way - Reading Specific Line: ", file_activities.readlines())
+file_activities.close()
