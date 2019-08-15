@@ -12,6 +12,7 @@ Read or write (perform operation)
 Close the file
 
 """
+import os
 
 file_operations = open('C:/Users/rathnr/Desktop/Questions.txt')
 print("File Details :", file_operations)
@@ -32,3 +33,12 @@ file_activities.close()
 file_activities = open('C:/Users/rathnr/PycharmProjects/PythonBasicAdvanced/file_activities.txt')
 print("Another Way - Reading Specific Line: ", file_activities.readlines())
 file_activities.close()
+
+# directories
+print("Current Working Directory :", os.getcwd())
+os.access(path='C:/Users/rathnr/PycharmProjects/PythonBasicAdvanced/', mode=1)
+print(os.fstat(fd=1))
+print("List of files in this directory :", os.listdir('C:/Users/rathnr/PycharmProjects/PythonBasicAdvanced/'))
+print(os.scandir('C:/Users/rathnr/PycharmProjects/PythonBasicAdvanced/'))
+# print("Making New Directory :", os.mkdir('C:/Users/rathnr/PythonLab-Dummy')) # Commented after creating dir
+print("List of new folders after creating directory :", os.listdir('C:/Users/rathnr'))
