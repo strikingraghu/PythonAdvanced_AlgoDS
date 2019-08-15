@@ -42,3 +42,5 @@ print("List of files in this directory :", os.listdir('C:/Users/rathnr/PycharmPr
 print(os.scandir('C:/Users/rathnr/PycharmProjects/PythonBasicAdvanced/'))
 # print("Making New Directory :", os.mkdir('C:/Users/rathnr/PythonLab-Dummy')) # Commented after creating dir
 print("List of new folders after creating directory :", os.listdir('C:/Users/rathnr'))
+# os.rename('C:/Users/rathnr/PythonLab-Dummy', 'C:/Users/rathnr/PythonLab-Dummy-Delete')
+print("After Renaming :", os.listdir('C:/Users/rathnr'))
