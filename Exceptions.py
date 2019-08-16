@@ -7,6 +7,7 @@ and to add debugging capabilities! Exception Handling − This would be covered 
 
 """
 import sys
+import os
 
 
 random_list = ['a', 'e', 'i', 'o', 'u', 1, 2, 3, 4, 5]
@@ -52,7 +53,7 @@ else:
 print('-----------------------')
 
 
-# zerodivisionerror
+# zero division error
 
 one_input = int(input("Enter one number "))
 two_input = int(input("Enter one more number "))
@@ -65,3 +66,62 @@ while True:
         one_input = int(input("Enter one number "))
         two_input = int(input("Enter one more number "))
 print("ZeroDivisionError logic is done")
+print('-----------------------')
+
+# runtime error
+
+try:
+    os.mkdir(":\\python_exception")
+    print("New Directory Created")
+    print(sys.copyright)
+except (RuntimeError, OSError, SystemError):
+    print("Exception noticed for OS module")
+print("Done with Runtime Error logic!")
+print('-----------------------')
+
+# index error
+sample_list = ['Ram', 'Sita', 'Hanuman', 'Lakshman', 100, 200, 300, 400]
+print("Length :", sample_list.__len__())
+try:
+    print("Trying to print Index value that is not present :", sample_list[10])
+    raise IndexError
+except IndexError as IE:
+    print("Index Error is noticed for this one : ", IE.__doc__, IE.__class__, IE)
+print("Done with Index Error logic")
+print('-----------------------')
+
+
+# user defined exceptions
+class Error(Exception):
+    """Base class for other exceptions"""
+    pass
+
+
+class ValueTooSmallError(Error):
+    """Raised when an input is too small"""
+    pass
+
+
+class ValueTooLargeError(Error):
+    """Raised when an input is too large"""
+    pass
+
+number_sample = 10
+while True:
+    try:
+        given_number = int(input("Enter one number"))
+        if given_number < number_sample:
+            raise ValueTooSmallError
+        elif given_number > number_sample:
+            raise ValueTooLargeError
+    except ValueTooSmallError:
+        print("This is small value")
+        print()
+    except ValueTooLargeError:
+        print("This is a large value")
+        print()
+    finally:
+        if given_number == number_sample:
+            print("Congrats, you have entered a right number")
+            break
+    print("All steps are performed!")
