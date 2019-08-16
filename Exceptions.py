@@ -50,3 +50,18 @@ else:
     print("Modifications are applied to this Python file, check the same")
     file_handling.close()
 print('-----------------------')
+
+
+# zerodivisionerror
+
+one_input = int(input("Enter one number "))
+two_input = int(input("Enter one more number "))
+while True:
+    try:
+        print("{0} / {1} is {2}".format(one_input, two_input, one_input/two_input))
+        break
+    except ZeroDivisionError:
+        print("Can't divide via Zero")
+        one_input = int(input("Enter one number "))
+        two_input = int(input("Enter one more number "))
+print("ZeroDivisionError logic is done")
