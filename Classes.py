@@ -85,7 +85,6 @@ class Vehicle:
 
     base_price = 0.0
 
-
     def number_of_wheels(self, number):
         if number == 4:
             print("It's a 4 wheeler")
@@ -119,3 +118,61 @@ print(swift.car_price())
 
 print("--------------------------")
 
+# encapsulation logic
+
+
+class Computer:
+
+    def __init__(self):
+        print("Inside Computer Class")
+        self._brand = 'Lenovo'
+
+    def model(self):
+        model = 'T440S'
+
+    def comp_price(self, price):
+        comp_price = 40000
+        if comp_price > 40000:
+            print("You are paying more!")
+        elif comp_price < 40000:
+            print("You are paying less")
+
+# instantiation
+laptop = Computer()
+laptop.comp_price(35000)
+print("--------------------------")
+
+
+# polymorphism
+
+
+class Dog:
+
+    def __init__(self):
+        print("Inside Dog Class")
+
+    def run(self):
+        print("Dogs can run!")
+
+
+class Labrador:
+
+    def __init__(self):
+        print("Inside Labrador Class")
+
+    def run(self):
+        print("Labrador can also run!")
+
+# common interface
+def lets_test_running(any_dog):
+    any_dog.run()
+
+# instantiation
+puppy01 = Dog()
+puppy02 = Labrador()
+puppy01.run()
+puppy02.run()
+
+lets_test_running(puppy01)
+lets_test_running(puppy02)
+print("--------------------------")
