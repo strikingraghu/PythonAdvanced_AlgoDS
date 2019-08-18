@@ -164,6 +164,8 @@ class Labrador:
         print("Labrador can also run!")
 
 # common interface
+
+
 def lets_test_running(any_dog):
     any_dog.run()
 
